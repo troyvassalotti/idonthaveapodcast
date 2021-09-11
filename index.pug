@@ -3,7 +3,7 @@ html(lang="en" dir="ltr")
     head
         meta(charset="utf-8")
         meta(name="viewport" content="width=device-width, initial-scale=1")
-        link(rel="stylesheet" href="/assets/css/main.min.css")
+        link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/water.css@2/out/water.css')
 
         - var url = "https://www.idonthaveapodcast.com"
         - var title = "I Don't Have A Podcast"
@@ -26,4 +26,34 @@ html(lang="en" dir="ltr")
         link(rel='icon' type='image/png' sizes='16x16' href='/assets/icons/favicon-16x16.png')
         link(rel='manifest' href='/site.webmanifest')
 
-    body(class="home")
+    body.home.container
+        header.site-header
+            .wrapper
+                h1=title
+                p=description
+        main.main
+            .wrapper
+                h2 Why Does This Exist
+                p When was the last time one of your friends told you they were starting a podcast? Yesterday? Yeah, that sounds about right. We all love podcasts as much as the next person, but we can also agree that the number of podcasts available to us right now is messed up.
+                blockquote Friends don't let friends contribute to the overloaded podcast landscape.
+                p You may #[em want] to start your own podcast... But don't. Hold out. Restrain yourself from creating a show based around pairing the perfect Yankee Candle with any given brunch order at all the local spots in your city.
+                p ...
+                p Okay, real talk? That'd be a pretty dope podcast. BUT DON'T MAKE IT.
+                h2 What Are You Supposed To Do?
+                p Pledge your allegiance not to a flag, but to the fight against starting your own podcast. Sign this site's petition (it's a simple form below) and tell the world where you stand.
+                h2 Fellow Never-Podcasters
+                ul.signers
+                    each person in ['Troy "Find me on Twitter @validcharacters" Vassalotti', 'Lyndsi Jones']
+                        li=person
+                h3 Sign Your Name To Fight Back
+                .form
+                    form(name="Never Starting A Podcast" data-netlify="true" netlify-honeypot="bot-field")
+                        label(style='display: none;') Don't fill this out: #[input(name='bot-field')]
+                        label(for='name') Name
+                        input#name(name='name' type='text' required)
+                        label(for='message') Message
+                        textarea#message(name='message' placeholder='Tell me anything else I should know (email, social handles, why, etc...)' rows='5')
+                        input#submit.button(type='submit' value='Submit')
+        footer.site-footer
+            .wrapper
+                p Made by #[a(href="https://www.troyv.dev") Troy Vassalotti]
