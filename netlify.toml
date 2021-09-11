@@ -1,0 +1,12 @@
+[[redirects]]
+    from = "https://priceless-edison-9a845b.netlify.app/*"
+    to = "https://www.idonthaveapodcast.com/:splat"
+    status = 301
+    force = true
+
+[[headers]]
+    for = "/*"
+    [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    X-XSS-Protection = "1"
