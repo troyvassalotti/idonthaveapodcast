@@ -3,13 +3,14 @@ html(lang="en" dir="ltr")
     head
         meta(charset="utf-8")
         meta(name="viewport" content="width=device-width, initial-scale=1")
+        title=title
+
         link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/water.css@2/out/water.css')
 
         - var url = "https://www.idonthaveapodcast.com"
         - var title = "I Don't Have A Podcast"
         - var description = "Are all your friends starting podcasts? Does that make you never want to start your own? Proclaim your dedication to never start your own podcast."
 
-        title=title
         meta(name="description" content=description)
         meta(name="og:locale" content="en_US")
         meta(name="og:type" content="website")
@@ -42,9 +43,32 @@ html(lang="en" dir="ltr")
                 h2 What Are You Supposed To Do?
                 p Pledge your allegiance not to a flag, but to the fight against starting your own podcast. Sign this site's petition (it's a simple form below) and tell the world where you stand.
                 h2 Fellow Never-Podcasters
+
+                -
+                    var people = [
+                        {
+                            name: 'Troy V',
+                            message: "Find me on Twitter @validcharacters"
+                        },
+                        {
+                            name: 'Lyndsi J'
+                        },
+                        {
+                            name: 'Kevin H',
+                            message: "I don’t even remember the last time I listened to a podcast.",
+                            note: "Watch out for this Badass."
+                        }
+                    ]
+
                 ul.signers
-                    each person in ['Troy "Find me on Twitter @validcharacters" V.', 'Lyndsi J.', 'Kevin H.: "I don’t even remember the last time I listened to a podcast." Editor\'s note: Watch out for this badass.']
-                        li=person
+                    each person in people
+                        if person.message
+                            if person.note
+                                li #{person.name}: #{person.message} #[strong Editor's Note:] #{person.note}
+                            else
+                                li #{person.name}: #{person.message}
+                        else
+                            li #{person.name}
                 h3 Sign Your Name To Fight Back
                 .form
                     form(name="Never Starting A Podcast" data-netlify="true" netlify-honeypot="bot-field")
