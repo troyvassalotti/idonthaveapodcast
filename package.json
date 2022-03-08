@@ -1,0 +1,19 @@
+{
+  "name": "idonthaveapodcast",
+  "version": "1.0.0",
+  "description": "Are all your friends starting podcasts? Does that make you so mad you never want to start your own? Then this is for you.",
+  "main": "build.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/troyvassalotti/idonthaveapodcast.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/troyvassalotti/idonthaveapodcast/issues"
+  },
+  "homepage": "https://github.com/troyvassalotti/idonthaveapodcast#readme",
+  "dependencies": {
+    "pug": "^3.0.2"
+  }
+}
