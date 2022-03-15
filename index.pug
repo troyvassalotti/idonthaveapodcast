@@ -24,10 +24,9 @@ html(lang="en" dir="ltr")
         link(rel="canonical" href=url)
 
     body
-        header
+        main
             h1=title
             p=description
-        main
             h2 Why Does This Exist
             p When was the last time one of your friends told you they were starting a podcast? Yesterday? Yeah, that sounds about right. We all love podcasts as much as the next person, but we can also agree that the number of podcasts available to us right now is messed up.
             blockquote Friends don't let friends contribute to the overloaded podcast landscape.
@@ -71,5 +70,3 @@ html(lang="en" dir="ltr")
                 label(for='message') Message
                 textarea#message(name='message' placeholder='Tell me anything else I should know (email, social handles, why, etc...)' rows='5')
                 input#submit(type='submit' value='Submit')
-        footer
-            p Made by #[a(href="https://www.troyv.dev") Troy Vassalotti]
