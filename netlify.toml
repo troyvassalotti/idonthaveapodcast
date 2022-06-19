@@ -5,12 +5,6 @@ publish = "_site"
 [build.processing]
 skip_processing = false
 
-[[redirects]]
-from = "https://priceless-edison-9a845b.netlify.app/*"
-to = "https://www.idonthaveapodcast.com/:splat"
-status = 301
-force = true
-
 [[headers]]
 for = "/*"
 [headers.values]
